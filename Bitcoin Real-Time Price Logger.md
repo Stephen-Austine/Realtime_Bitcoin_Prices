@@ -1,7 +1,3 @@
-This project implements a real-time Bitcoin price tracker and logger. It fetches live market data from the CoinGecko API, records the data with timestamps into a local CSV file, and generates a visual trend line upon user termination.
-
----
-
 ## Bitcoin Real-Time Price Logger
 
 This script provides a lightweight solution for monitoring cryptocurrency fluctuations and maintaining a historical record for later analysis.
@@ -14,10 +10,12 @@ The script operates on a continuous fetch-log-sleep cycle. It uses the `requests
 
 While this script is primarily an ETL (Extract, Transform, Load) tool, the price movement it tracks is often analyzed using the **Percentage Change** formula to determine volatility between intervals (t and t-1):
 
+_Price Change (%)=( (P_t - P_t−1)/ P_t−1 ) × 100_
+
 Where:
 
-* P_t: Current price at time t.
-* P_{t-1}: Previous price at the last recorded interval.
+* _P_t_: Current price at time t.
+* _P_(t-1): Previous price at the last recorded interval.
 
 ---
 
